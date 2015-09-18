@@ -75,14 +75,6 @@
   (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
   (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 
-  ;; auto-completion
-  (require 'auto-complete-config)
-  (ac-config-default)
-
-  ;; yasnippets
-  (require 'yasnippet)
-  (yas-global-mode 1)
-
   ;; powerline mode-line
   ;;(require 'powerline)
   ;;(powerline-default-theme)
@@ -91,6 +83,7 @@
   ;; ------------------------------------------------------------------
   (defvar local-packages '(projectile
                            auto-complete
+                           yasnippet
                            epc
                            jedi
                            ))
@@ -143,6 +136,14 @@
             ("\\.topml$" . tuareg-mode))
             auto-mode-alist))
 
+
+;; Auto-complete
+(require 'auto-complete-config)
+(ac-config-default)
+
+;; Yasnippet
+(require 'yasnippet)
+(yas-global-mode 1)
 
 ;; Projectile
 (require 'projectile)
